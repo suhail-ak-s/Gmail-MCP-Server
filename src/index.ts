@@ -27,8 +27,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CONFIG_DIR = path.join(os.homedir(), '.gmail-mcp');
 const OAUTH_PATH = process.env.GMAIL_OAUTH_PATH || path.join(CONFIG_DIR, 'gcp-oauth.keys.json');
 const CREDENTIALS_PATH = process.env.GMAIL_CREDENTIALS_PATH || path.join(CONFIG_DIR, 'credentials.json');
-const AUTH_SERVER_PORT = parseInt(process.env.GMAIL_AUTH_SERVER_PORT || '3000', 10);
-const AUTH_SERVER_HOST = process.env.GMAIL_AUTH_SERVER_HOST || 'localhost';
+const AUTH_SERVER_PORT = parseInt(process.env.GMAIL_AUTH_SERVER_PORT || '443', 10);
+const AUTH_SERVER_HOST = process.env.GMAIL_AUTH_SERVER_HOST || 'gmail-mcp-auth.syia.ai';
 const AUTH_SERVER_TYPE = process.env.GMAIL_AUTH_SERVER_TYPE || 'https';  
 const REDIRECT_URL = `${AUTH_SERVER_TYPE}://${AUTH_SERVER_HOST}:${AUTH_SERVER_PORT}/oauth2callback`;
 

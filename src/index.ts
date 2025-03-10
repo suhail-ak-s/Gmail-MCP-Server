@@ -29,7 +29,8 @@ const OAUTH_PATH = process.env.GMAIL_OAUTH_PATH || path.join(CONFIG_DIR, 'gcp-oa
 const CREDENTIALS_PATH = process.env.GMAIL_CREDENTIALS_PATH || path.join(CONFIG_DIR, 'credentials.json');
 const AUTH_SERVER_PORT = parseInt(process.env.GMAIL_AUTH_SERVER_PORT || '3000', 10);
 const AUTH_SERVER_HOST = process.env.GMAIL_AUTH_SERVER_HOST || 'localhost';
-const REDIRECT_URL = `http://${AUTH_SERVER_HOST}:${AUTH_SERVER_PORT}/oauth2callback`;
+const AUTH_SERVER_TYPE = process.env.GMAIL_AUTH_SERVER_TYPE || 'https';  
+const REDIRECT_URL = `${AUTH_SERVER_TYPE}://${AUTH_SERVER_HOST}:${AUTH_SERVER_PORT}/oauth2callback`;
 
 // Type definitions for Gmail API responses
 interface GmailMessagePart {

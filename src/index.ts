@@ -429,7 +429,7 @@ async function startAuthServer(): Promise<http.Server> {
                         console.log(`[DEBUG] Credentials saved successfully to: ${userCredentialsPath}`);
         
                         res.writeHead(200);
-                        res.end('Authentication successful! You can close this window and return to Claude.');
+                        res.end('Authentication successful! You can close this window and return to SYIA.');
                         console.log(`User ${state} authenticated successfully`);
                         
                         // After handling a successful auth, we can close the server after a delay
